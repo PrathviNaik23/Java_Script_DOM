@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <strong>Select the skills</strong>
+    <input type="checkbox" name="skills" id="" value="Web-Tech"><label for="">Web-Tech</label>
+    <input type="checkbox" name="skills" id="" value="Python"><label for="">Python</label>
+    <input type="checkbox" name="skills" id="" value="SQL"><label for="">SQL</label>
+    <input type="checkbox" name="skills" id="" value="ReactJs"><label for="">ReactJs</label>
+    <br><br>
+
+    <button onclick="showSkills()">Show skills</button>
+
+    <h1>Selected Skills : <strong id="selected"></strong></h1>
+
+    <script>
+        function showSkills(){
+            let a = []
+            let allskills = document.getElementsByName("skills")
+            let selected = document.getElementById("selected")
+            // console.log(allskills[0].value)
+
+            for(i = 0;i<allskills.length;i++){
+                if(allskills[i].checked){
+                    console.log(allskills[i].value)
+                    a.push(allskills[i].value)
+                    
+                }
+            }
+            console.log(a.join(","))
+            // using join method
+            let resEle = a.join(",")
+
+            selected.textContent = resEle
+
+            // this one is directly add array to content
+            // selected.textContent = a
+
+
+        }
+    </script>
+</body>
+</html>

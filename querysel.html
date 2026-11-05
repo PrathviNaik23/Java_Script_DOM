@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Pyspiders | Pune</h1>
+        <h1>Pyspiders | BTM</h1>
+        <h1>Pyspiders | BTM</h1>
+        <h1>Pyspiders | BTM</h1>
+    </div>
+    <button onclick="getEle()"> Fetch-1</button>
+    <hr>
+    <div class="main-2">
+        <h2>HELLO</h2>
+        <h2>HELLO</h2>
+        <h2>HELLO</h2>
+        <h2>HELLO</h2>
+    </div>
+    <button onclick="add()">Fetch-2</button>
+    <script>
+        function add(){
+            let head = document.querySelectorAll(".main-2>h2")
+            console.log(head)
+
+            for(let i of head){
+                console.log(i.textContent)
+            }
+
+        }
+    </script>
+    <script>
+        function getEle(){
+            let headEle = document.querySelector(".main>h1")
+            console.log(headEle)
+        }
+    </script>
+</body>
+</html>

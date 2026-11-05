@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <h1 id="hello" onclick="change()" ondblclick="change2()">hello world</h1>
+
+    <script>
+        let hello = document.querySelector("#hello")
+        function change(){
+            //fetching element using querySelector() 
+            
+            //changing the content
+            hello.textContent = "Welcome to DOM"
+        }
+        function change2(){
+            hello.textContent = "welcome to event handler"
+        }
+    </script>
+    <!--onmouseenter onmouseleave-->
+    <video src="https://www.pexels.com/download/video/29241638/" width="400px" muted loop id="videoEle" onmouseenter="playVideo()" onmouseleave="pauseVideo()"></video>
+    <script>
+        let videoEle = document.querySelector("#videoEle")
+
+        function playVideo(){
+            videoEle.play()
+        }
+        function pauseVideo(){
+            videoEle.pause()
+        }
+    </script>
+    <hr>
+    <input type="text" name="" id="inpEle" onkeydown="display()" onkeyup="getData()">
+    <br><br><br><br><br><br>
+    <script>
+        let inpEle = document.querySelector("#inpEle")
+        function display(){
+        //alert("Yess you have pressed the key") 
+        }
+        function getData(){
+            //console.log(inpEle.value)
+            let updatedStr = inpEle.value.toUpperCase()
+            console.log(updatedStr)
+
+            // changing the value to uppercase in the input field
+            inpEle.value = updatedStr
+        }
+    </script>
+    
+</body>
+</html>

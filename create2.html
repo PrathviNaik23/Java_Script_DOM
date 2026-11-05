@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add()">Click</button>
+    <h1 id="txt"></h1>
+    <script>
+        function add(){
+            let headEle = document.createElement("input")
+            let txt = document.getElementById("txt")
+
+            let val = headEle.value
+            txt.textContent = val
+
+
+        }
+    </script>
+
+</body>
+</html>

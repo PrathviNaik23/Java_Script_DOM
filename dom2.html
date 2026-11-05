@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1 onclick="change()" id="headEle">PYSPIDERS</h1>
+    <script>
+        function change(){
+            // fetching the element with the help of getElementById()
+            let headEle = document.getElementById("headEle")
+
+            // Accessing the html elemnt in console
+            console.log(headEle)
+
+            // Accessing the content of the headEle in console
+            console.log(headEle.textContent)
+
+            //styling the html element with the help of js
+            headEle.style.color = "orange"
+
+            headEle.textContent = "JSPIDERS | BTM"
+        }
+    </script>
+    <hr>
+    <!--value-->
+    <input type="text" name="" id="inpEle" placeholder="username">
+
+    <button onclick="getuserData()">Get Data</button>
+    <h1>User name enterd by user : <strong id="resEle"></strong></h1>
+    <script>
+        function getuserData(){
+            let username = document.getElementById("inpEle")
+            let result = document.getElementById("resEle")
+
+            // accessing the va;ue of input element
+            let userName = username.value
+
+            result.textContent = userName
+        }
+    </script>
+    <hr>
+    <textarea name="" id="txtEle" placeholder="FEEDBACK"></textarea>
+    <button onclick="txtf()">Click</button>
+    <h1>FEED BACK : <p id="feedEle"></p></h1>
+    <script>
+        function txtf(){
+            let txt = document.getElementById("txtEle")
+            let feed = document.getElementById("feedEle")
+
+            let feedb = txt.value
+
+            feed.textContent = feedb
+        }
+    </script>
+    <div id="main"></div>
+    <button onclick="addContent()">Add Content</button>
+
+    <script>
+        function addContent(){
+            let divEle = document.getElementById("main")
+            console.log(divEle)
+            
+            divEle.innerHTML = `
+            <h2>Pyspider</h2>`
+        }
+    </script>
+</body>
+</html>

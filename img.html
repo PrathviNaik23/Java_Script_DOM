@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://images.pexels.com/photos/35617550/pexels-photo-35617550.jpeg" alt="" width="400px" id="imgEle">
+        <button onclick="changeImage()">Change</button>
+        <button onclick="previous()">Previous</button>
+        <script>
+            let changeImage = () => {
+                let imgEle = document.getElementById("imgEle")
+                // console.log(imgEle)
+
+                // adding new url
+                imgEle.src = "https://images.pexels.com/photos/40437110/pexels-photo-40437110.jpeg"
+            }
+            let previous = () =>{
+                // let imgEle = document.getElementById("imgEle")
+                // console.log(imgEle)
+                imgEle.src = "https://images.pexels.com/photos/35617550/pexels-photo-35617550.jpeg"
+            }
+        </script>
+    </div>
+</body>
+</html>

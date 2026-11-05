@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--oninput,onfocus,onblur,onchange,onsubmit-->
+    <form action="">
+        <fieldset>
+            <label for="">Enter The Username: </label><input type="text" name="" id="inpEle" oninput="getUsername()" onfocus="showPlaceholder1()" onblur="removeplaceholder()">
+
+            <br><br>
+
+            <label for="">Enter Password: </label><input type="password" name="" id="passEle" onfocus="showPlaceholder2()">
+
+        </fieldset>
+    </form>
+    <script>
+        let userEle = document.querySelector("#inpEle")
+        let passwordEle = document.querySelector("#passEle")
+
+        function getUsername(){
+            console.log("UserName : ",inpEle.value.toUpperCase())
+
+            let updatedStr = userEle.value.toUpperCase()
+            userEle.value = updatedStr
+        }
+
+        let showPlaceholder1 = ()=>{
+            userEle.setAttribute("placeholder","Username")
+        }
+        let removeplaceholder = ()=>{
+            userEle.removeAttribute("placeholder")
+            // passwordEle.removeAttribute("placeholder")
+        }
+        let showPlaceholder2 = ()=>{
+            passwordEle.setAttribute("placeholder","Password")
+        }
+    </script>
+</body>
+</html>
