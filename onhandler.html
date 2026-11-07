@@ -33,10 +33,49 @@
         }
         let removeplaceholder = ()=>{
             userEle.removeAttribute("placeholder")
-            // passwordEle.removeAttribute("placeholder")
+            passwordEle.removeAttribute("placeholder")
         }
         let showPlaceholder2 = ()=>{
             passwordEle.setAttribute("placeholder","Password")
+        }
+    </script>
+    <hr>
+    <strong>Select Domain : </strong>
+    <select name="" id="selectEle" onchange="getSelected()">
+        <option value="" hidden>-----Chose Here-----</option>
+        <option value="FULL-STACK">FULL-STACK</option>
+        <option value="DATA-SCIENCE">DATA-SCIENCE</option>
+    </select>
+    <h1>Selected Domain : <strong id="strEle"></strong></h1>
+
+    <script>
+        function getSelected(){
+            let element=document.querySelector("#selectEle")
+            let strEle = document.querySelector("#strEle")
+            console.log(element.value)
+            let getEle = element.value
+
+            strEle.textContent = getEle
+        }
+    </script>
+    <!--onsubmit-->
+    <form action="" onsubmit="getUserData(event)">
+        <fieldset>
+            <input type="text" name="login" id="" placeholder="Username">
+            <input type="password" name="login" id="" placeholder="Password">
+
+            <button type="submit">SUBMIT</button>
+        </fieldset>
+    </form>
+    <script>
+        let getUserData = (event)=>{
+            //preventDefault() is used to avoid unneccesary refresh
+            event.preventDefault()
+            let allData = document.getElementsByName("login")
+            // console.log(allData[0].value)
+            for(let i = 0;i < allData.length;i++){
+                console.log(allData[i].value)
+            }
         }
     </script>
 </body>
