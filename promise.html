@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="display()">Show promise</button>
+
+    <script>
+        let display = ()=>{
+            let status = true
+            let promise = new Promise((resolve,reject)=>{
+                if(status === true){
+                    resolve("Date is success")
+                }
+                else{
+                    reject("Date is failure")
+                }
+            })
+            promise.then((success)=>{
+                console.log(success)
+            }).catch((fail)=>{
+                console.log(fail)
+            })
+        }
+    </script>
+    <hr>
+    <button onclick="display2()">Show promise2</button>
+    <script>
+        function display2(){
+            let num = +prompt("Enter the number")
+            new Promise((resolve,reject)=>{
+                if(num === 0){
+                    resolve("Promise resolved successfully")
+                }
+                else{
+                    reject("Promise Rejected....!")
+                }
+            }).then((success)=>{
+                console.log("Promise status ",success)
+            }).catch((fail)=>{
+                console.log("Promise status ",fail)
+            })
+        }
+    </script>
+    <hr>
+    <!--example 3-->
+    <button onclick="display3()">Show promise3</button>
+    <script>
+        function display3(){
+            new Promise((resolve,reject)=>{
+                setTimeout(resolve,2000,"Resolved")
+            }).then(success => console.log(success)).catch(err => console.log(err)).finally(()=>{
+                console.log("Always executes at end")
+            })
+        }
+    </script>
+</body>
+</html>

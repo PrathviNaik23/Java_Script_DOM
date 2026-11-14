@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Evenet  handler-->
+    <h1 id="headEle" onclick="change()">Jake</h1>
+
+    <script>
+        function change(){
+            let headele = document.querySelector("#headEle")
+            headele.textContent = "Jake Gylanhall"
+        }
+    </script>
+
+    <!--Event Listner-->
+    <h1 id="headEle2">Tom</h1>
+
+    <script>
+        let headEle2 = document.querySelector("#headEle2")
+        headEle2.addEventListener("click",()=>{
+            headEle2.textContent = "Tom Holland"
+        })
+    </script>
+
+    <!--On Double Click-->
+    <h1 id="headEle3">Chris</h1>
+
+    <script>
+        let headEle3 = document.querySelector("#headEle3")
+        headEle3.addEventListener("dblclick",()=>{
+            headEle3.textContent = "Chris Evans"
+        })
+    </script>
+
+    <!--On Mouse Enter-->
+    <h1 id="headEle4">Harry</h1>
+    <video src="https://www.pexels.com/download/video/34653030/" width="400px"></video>
+
+    <script></script>
+
+</body>
+</html>
