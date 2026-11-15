@@ -38,9 +38,19 @@
 
     <!--On Mouse Enter-->
     <h1 id="headEle4">Harry</h1>
-    <video src="https://www.pexels.com/download/video/34653030/" width="400px"></video>
+    <video src="https://www.pexels.com/download/video/34653030/" width="400px" id="headEle5" loop muted></video>
 
-    <script></script>
+    <script>
+        let headEle4 = document.querySelector("#headEle4")
+        headEle4.addEventListener("mouseenter",()=>{
+            headEle4.textContent = "Harry Potter"
+        })
+
+        let headEle5 = document.querySelector("#headEle5")
+        headEle5.addEventListener("mouseenter",()=>{
+            headEle5.play()
+        })
+    </script>
 
 </body>
 </html>
