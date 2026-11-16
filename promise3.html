@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function vote(){
+            let age = +prompt("Enter The Age : ")
+            new Promise((resolve,reject)=>{
+                if(age >= 18){
+                    resolve("Eligible to vote..")
+                }
+                else{
+                    reject("Not Eligible!")
+                }
+            }).then((pass)=>{
+                console.log(pass)
+            }).catch((fail)=>{
+                console.log(fail)
+            })
+        }
+        vote()
+    </script>
+</body>
+</html>

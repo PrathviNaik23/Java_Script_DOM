@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function number(){
+            let num = +prompt("Enter the number : ")
+            new Promise((resolve,reject)=>{
+                if(num % 2 === 0){
+                    resolve("Even number..")
+                }
+                else{
+                    reject("Odd number!")
+                }
+            }).then((pass)=>{
+                console.log(pass)
+            }).catch((fail)=>{
+                console.log(fail)
+            })
+        }
+        number()
+    </script>
+</body>
+</html>

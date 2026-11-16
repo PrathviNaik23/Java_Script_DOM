@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .main{
+            /* width: 50px;
+            height:  */
+            border: 3px black;
+            display: flex;
+            justify-content: center;
+        }
+        .main2{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="text" name="" id="user" placeholder="Username"><label for="">Enter Username</label><br><br>
+        <input type="email" name="" id="emailId" placeholder="Email"><label for="">Enter Email</label>
+        <!-- <br><br> -->
+        <!-- <button onclick="display()">show</button> -->
+    </div>
+    <div class="main2">
+        <button onclick="display()">show</button>
+    </div>
+    <script>
+        let user = document.querySelector("#user")
+        let emailId = document.querySelector("#emailId")
+        function show(){
+            return new Promise((resolve,reject)=>{
+                resolve(user.value)
+            })
+        }
+        function show2(){
+            return new Promise((resolve,reject)=>{
+                resolve(emailId.value)
+            })
+        }
+        async function display(){
+            try{
+                let res = await show()
+                let res2 = await show2()
+                console.log(res)
+                console.log(res2)
+
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+    </script>
+</body>
+</html>
